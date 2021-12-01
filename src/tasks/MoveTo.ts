@@ -6,9 +6,10 @@ export const MoveTo = {
   board: (sq: string[]) =>
     Task.where(
       `#actor move to square on the board`,
-      Log.the('SQ: ' + sq[0]),
       Wait.until(Square.move(sq[0]), isVisible()),
       Click.on(Square.move(sq[0])),
-    
+      Click.on(Square.move(sq[1])),
+      Click.on(Square.move(sq[2])),
+      Click.on(Square.move(sq[3]))
     ),
 }

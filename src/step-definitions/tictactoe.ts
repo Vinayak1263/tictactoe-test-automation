@@ -2,7 +2,7 @@ import 'expect-webdriverio'
 
 import { DataTable, Given, Then, When } from '@cucumber/cucumber'
 import { Actor, actorInTheSpotlight, Check, Log } from '@serenity-js/core'
-import { isVisible, Navigate } from '@serenity-js/webdriverio'
+import { Navigate } from '@serenity-js/webdriverio'
 
 import { MoveTo } from '../tasks/MoveTo'
 
