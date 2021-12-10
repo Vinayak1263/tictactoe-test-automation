@@ -86,24 +86,12 @@ export const config: WebdriverIOConfig = {
       // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
-      maxInstances: 1,
-      //
-      browserName: 'chrome',
-      acceptInsecureCerts: true,
-      // If outputDir is provided WebdriverIO can capture driver session logs
-      // it is possible to configure which logTypes to include/exclude.
-      // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-      // excludeDriverLogs: ['bugreport', 'server'],
-      browserstackLocal: true,
-      'goog:chromeOptions': {
-        args: [
-          //  '--headless',
-          '--disable-infobars',
-          '--no-sandbox',
-          '--disable-gpu',
-          '--window-size=1024,768',
-        ].concat(isCI ? ['--headless'] : []), // run in headless mode on the CI server,
-      },
+      "os" : "Windows",
+      "os_version" : "10",
+      "browserName" : "Chrome",
+      "browser_version" : "latest-beta",
+      
+      
     },
   ],
   //
@@ -153,10 +141,7 @@ export const config: WebdriverIOConfig = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  services: ['browserstack', 
-    user: config.BROWSERSTACK_USERNAME,
-    key: config.BROWSERSTACK_ACCESS_KEY
-  ],
+
 
   //
   // The number of times to retry the entire specfile when it fails as a whole
@@ -343,3 +328,6 @@ export const config: WebdriverIOConfig = {
   //onReload: function(oldSessionId, newSessionId) {
   // }
 }
+config.user ="user_name"
+config.key ="access_key"
+

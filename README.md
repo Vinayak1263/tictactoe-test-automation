@@ -1,15 +1,7 @@
 # Web Automation for tictactoe using Serenity/JS Cucumber WebdriverIO Template
 
-_In MacOS_
+In wdio bs conf change your username and access key 
+Change the capabilites as per your requirements 
 
-```
-brew install chromedriver
-sudo xattr -r -d com.apple.quarantine /usr/local/bin
-chromedriver
-```
-
-
-references:
-```
-https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
-```
+To run use command 
+yarn  test:test:bs:execute
